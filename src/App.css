@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main-container {
   min-height: 100vh;
+  background-color: #e6e6e6;
+  position: relative;
+}
+
+/* 卡片上方藍色漸層至下方紫色背景 */
+.todo-card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, #eef7fe 0%, #ecedff 100%);
+  transition: all 0.3s ease-in-out;
+  height: 80vh;
+}
+
+.todo-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.todo-card .card-body {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 1.5rem;
+}
+
+/* 標題樣式 */
+.title-section {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 300;
+  color: #788fd4;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #788fd4;
+  margin-bottom: 0.5rem;
+}
+
+/* 線線 */
+.divider {
+  height: 3px;
+  background-color: #788fd4;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.switch-section {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.switch-container {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-wrapper {
+  margin-top: auto;
+  padding-top: 1rem;
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* RWD設定 */
+@media (max-width: 576px) {
+  .todo-card {
+    margin: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
   }
 }

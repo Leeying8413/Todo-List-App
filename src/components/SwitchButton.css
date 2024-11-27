@@ -1,0 +1,76 @@
+.switch-container {
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    z-index: 1;
+    flex-direction: row-reverse;
+}
+
+.switch-label {
+    font-size: 0.9rem;
+    color: #788fd4;
+    margin: 0;
+    padding-right: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 開關容器的樣式重置 */
+.form-check {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+}
+
+.custom-switch {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.custom-switch .form-check-input {
+    height: 22px;
+    width: 40px;
+    cursor: pointer;
+    background-color: #fff;
+    border-color: #e0e0e0;
+    position: relative;
+}
+
+.custom-switch .form-check-input::before {
+    background-color: #9fa8da !important;
+    /* 未選中時圓點為淺紫色 */
+}
+
+.custom-switch .form-check-input:checked {
+    background-color: #9fa8da;
+    /* 選中時背景為淺紫色 */
+    border-color: #9fa8da;
+}
+
+.custom-switch .form-check-input:checked::before {
+    background-color: #fff !important;
+
+}
+
+/* 移除 focus 相關的預設 */
+.custom-switch .form-check-input:focus {
+    box-shadow: none !important;
+    border-color: #e0e0e0;
+}
+
+.custom-switch .form-check-input:checked:focus {
+    border-color: #9fa8da;
+}
+
+/* 移除 Bootstrap 默認樣式 */
+.form-switch .form-check-input {
+    margin-left: 0;
+}
+
+.form-check {
+    padding-left: 0;
+    margin: 0;
+}

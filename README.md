@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+## 如何啟動
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+首先，請確保你的電腦上已安裝 Node.js 和 npm。[Node.js 官網] (https://nodejs.org/)
 
-## Available Scripts
+1. 將程式碼 clone 到電腦本機端上。
 
-In the project directory, you can run:
+2. 打開終端機，進到專案資料夾。
 
-### `npm start`
+3. 安裝所需套件：
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```
+   npm install
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. 啟動開發伺服器：
 
-### `npm test`
+   ```
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. 專案會自動在瀏覽器中打開： `http://localhost:3000`。
 
-### `npm run build`
+## 功能概覽
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **輸入和新增待辦事項**：使用輸入框輸入新事項，按下「+」就能把它加到列表中，事項會按時間排序。
+2. **勾選和刪除待辦事項**：每個事項旁邊有個勾選框可以勾選完成的事項,也有個刪除鈕可以將它從列表移除。
+3. **待辦事項列表滾動**：當事項多到溢出卡片範圍時，列表會出現垂直滾動條。
+4. **進度條顯示**：頂部進度條，顯示已完成和未完成事項的百分比。
+5. **排序切換**：可以開啟開關按鈕，把已完成的事項移到列表最下方。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 技術特點
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **使用 React 函數式組件和 Hooks**
+2. **採用 Bootstrap CSS 框架**
+3. **使用 SweetAlert2 做刪除確認**
+4. **支援響應式設計**
+5. **設計了範例清單，和相關的處理（比如說按下切換扭會自動把範例刪除，並且範例不算在進度條的百分比內）**
