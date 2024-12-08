@@ -70,8 +70,8 @@ export const TodoProvider = ({ children }) => {
   }, []);
 
   // 取得排序後的待辦事項
-  // 1. 未完成的排在前面
-  // 2. 已完成的排在後面
+  // 1. 未完成的排在前
+  // 2. 已完成的排在末尾
   // 3. 同類型內部按時間戳排序
   const getSortedTodos = useCallback(() => {
     if (!sortCompleted) return todos;
@@ -98,7 +98,7 @@ export const TodoProvider = ({ children }) => {
   return <TodoContext.Provider value={value}>{children}</TodoContext.Provider>;
 };
 
-// 自訂 Hook 讓子組件更容易使用 Context
+// 自訂 Hook (for Context)
 export const useTodoContext = () => {
   const context = useContext(TodoContext);
   if (!context) {
