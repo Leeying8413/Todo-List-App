@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import { Form, Button, InputGroup } from "react-bootstrap";
 import { IoAdd } from "react-icons/io5";
+import { useTodoContext } from "../../context/TodoContext";
 import "./AddTodoForm.css";
 
-// 標籤、輸入框和新增按鈕
-// 使用 Bootstrap 的 Form 組件確保 RWD 和基礎樣式
-const AddTodoForm = ({ onAddTodo }) => {
+// 新增待辦事項的表單組件
+// 包含標題、輸入框和新增按鈕
+const AddTodoForm = () => {
   const [inputValue, setInputValue] = useState("");
+  const { handleAddTodo } = useTodoContext();
 
-  // 處理表單提交：防止空值、去除前後空白
+  // 處理表單提交：判斷空值和處理多餘空格
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim()) {
-      onAddTodo({
-        id: Date.now(),
-        text: inputValue.trim(),
-        completed: false,
-        timestamp: new Date().getTime(),
-        isDefault: false,
-      });
+      handleAddTodo(inputValue.trim());
       setInputValue("");
     }
   };

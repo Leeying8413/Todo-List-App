@@ -1,9 +1,13 @@
 import React from "react";
+import { useTodoContext } from "../../context/TodoContext";
 import "./ProgressBar.css";
 
-// 進度條：顯示除範例代辦事項外，使用者新增的條目
-const ProgressBar = ({ todos }) => {
-  // 無待辦事項時回傳0，計算代辦事項時，百分比四捨五入到整數
+// 顯示完成進度的組件
+// 計算非預設待辦事項的完成百分比
+const ProgressBar = () => {
+  const { todos } = useTodoContext();
+
+  // 計算進度：排除預設項目，四捨五入到整數
   const calculateProgress = () => {
     const actualTodos = todos.filter((todo) => !todo.isDefault);
     if (actualTodos.length === 0) return 0;

@@ -1,11 +1,16 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import { useTodoContext } from "../../context/TodoContext";
 import "./SwitchButton.css";
 
-const SwitchButton = ({ sortCompleted, onToggle }) => {
+// 排序切換按鈕組件
+// 控制已完成事項是否移到列表底部
+const SwitchButton = () => {
+  const { sortCompleted, handleSort } = useTodoContext();
+
+  // 處理切換狀態的變化
   const handleChange = (e) => {
-    // 調用傳入的 onToggle 函數
-    onToggle(e.target.checked);
+    handleSort(e.target.checked);
   };
 
   return (

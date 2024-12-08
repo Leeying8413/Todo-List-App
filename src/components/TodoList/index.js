@@ -1,9 +1,15 @@
 import React from "react";
 import { ListGroup, Form, Button } from "react-bootstrap";
 import { IoClose } from "react-icons/io5";
+import { useTodoContext } from "../../context/TodoContext";
 import "./TodoList.css";
 
-const TodoList = ({ todos, onToggle, onDelete }) => {
+// 顯示所有待辦事項的列表組件
+// 每個項目包含勾選框和刪除按鈕
+const TodoList = () => {
+  const { getSortedTodos, handleToggle, handleDelete } = useTodoContext();
+  const todos = getSortedTodos();
+
   // 若無待辦事項，則顯示空區塊
   if (todos?.length === 0) {
     return <div className="todo-list-wrapper empty-list"></div>;
@@ -20,7 +26,7 @@ const TodoList = ({ todos, onToggle, onDelete }) => {
               <Form.Check
                 type="checkbox"
                 checked={todo.completed}
-                onChange={() => onToggle(todo.id)}
+                onChange={() => handleToggle(todo.id)}
                 className="todo-checkbox"
               />
               {/* completed狀態會加上刪除線 */}
@@ -33,7 +39,7 @@ const TodoList = ({ todos, onToggle, onDelete }) => {
             {/* 刪除按鈕 */}
             <Button
               variant="link"
-              onClick={() => onDelete(todo.id)}
+              onClick={() => handleDelete(todo.id)}
               className="delete-button"
             >
               <IoClose />
