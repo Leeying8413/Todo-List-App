@@ -4,13 +4,13 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![React Hooks](https://img.shields.io/badge/React_Hooks-999999?style=for-the-badge&logo=react&logoColor=white)
 
-一個使用 React 打造的待辦事項清單應用，具有優雅的 UI 設計和流暢的使用體驗。
+一個使用 React 打造的待辦事項清單應用！具有美觀的 UI 設計和直覺的使用體驗，包準你愛不釋手！
 
 ## 🌟 特色功能
 
-- 💫 優雅的介面設計
-- 📱 完整的響應式支援
-- 🔄 智能排序系統
+- 💫 優雅的介面設計 （我最喜歡紫色了）
+- 📱 完整的響應式支援 （隨意拉動視窗也沒問題！）
+- 🔄 排序系統
 - 📊 即時進度追蹤
 - 💾 本地數據持久化
 - 🎯 直覺的使用者介面
@@ -107,7 +107,7 @@ src/
    - 完整的錯誤處理機制
    - 直覺的操作流程
 
-## 📮 聯絡我！
+## 📮 有問題嗎？歡迎隨時聯絡我！
 
 [Jasper Lee] - [jasperlee1925@gmail.com]
 
